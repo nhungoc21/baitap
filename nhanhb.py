@@ -38,14 +38,10 @@ for i in range(N):
     # Tinh diem
     tong = tinhdiem(dsdiem, dstinchi, diemrl)
     dstong.append(tong)
-print('Danh sach ten hoc sinh', dshocsinh)
-print('Danh sach diem tong tung hoc sinh', dstong)
 
 # Sap xep danh sach
 tong_sapxep = sorted(dstong, reverse=True)
-print(tong_sapxep)
 sinhvien = sapxepten(tong_sapxep, dstong, dshocsinh)
-print(sinhvien)
 
 # Lay ra hoc sinh nhan hoc bong
 for i in range(3):
