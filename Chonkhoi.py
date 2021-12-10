@@ -3,7 +3,7 @@ dstongdiem = []
 # nhapdiem
 dstenmon = ['Toan', 'Ly', 'Hoa', 'Sinh', 'Su', 'Dia', 'Van', 'Anh']
 for i in range(len(dstenmon)):
-    print('Nhapmon ' + dstenmon[i])
+    print('Nhap diem ' + dstenmon[i])
     s = float(input())
     dsdiem.append(s)
 print('Danh sach diem tung mon: ', dsdiem)
