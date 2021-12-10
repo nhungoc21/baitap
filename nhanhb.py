@@ -47,8 +47,5 @@ sinhvien = sapxepten(tong_sapxep, dstong, dshocsinh)
 for i in range(3):
     if (tong_sapxep[i] >= diemhb):
         dsnhanhb.append(i)
-    else: 
-        print('Khong co hoc sinh du dieu kien')
-        break
 for i in range(len(dsnhanhb)):
     print('Danh sach sinh vien nhan hoc bong: ' + sinhvien[dsnhanhb[i]])
