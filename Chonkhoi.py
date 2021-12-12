@@ -1,6 +1,13 @@
+#Ung Thị Như Ngọc - K214060404
+
+# tinh diem tong tung khoi
+def tongdiem(a, b, c, dstongdiem):
+    tong = a * 2 + b + c
+    dstongdiem.append(tong)
+    return dstongdiem
+
+# nhap diem tung mon
 dsdiem = []
-dstongdiem = []
-# nhapdiem
 dstenmon = ['Toan', 'Ly', 'Hoa', 'Sinh', 'Su', 'Dia', 'Van', 'Anh']
 for i in range(len(dstenmon)):
     print('Nhap diem ' + dstenmon[i])
@@ -8,17 +15,12 @@ for i in range(len(dstenmon)):
     dsdiem.append(s)
 print('Danh sach diem tung mon: ', dsdiem)
 
-# tinhdiem
-def tongdiem(a, b, c):
-    tong = a * 2 + b + c
-    dstongdiem.append(tong)
-    return dstongdiem
-
-# tong tung khoi
-tongdiem(dsdiem[0], dsdiem[1], dsdiem[2])
-tongdiem(dsdiem[3], dsdiem[2], dsdiem[0])
-tongdiem(dsdiem[6], dsdiem[4], dsdiem[5])
-tongdiem(dsdiem[7], dsdiem[0], dsdiem[6])
+# tong diem tung khoi
+dstongdiem = []
+tongdiem(dsdiem[0], dsdiem[1], dsdiem[2], dstongdiem)
+tongdiem(dsdiem[3], dsdiem[2], dsdiem[0], dstongdiem)
+tongdiem(dsdiem[6], dsdiem[4], dsdiem[5], dstongdiem)
+tongdiem(dsdiem[7], dsdiem[0], dsdiem[6], dstongdiem)
 print('Danh sach tong diem theo khoi: ', dstongdiem)
 
 # tuvan
