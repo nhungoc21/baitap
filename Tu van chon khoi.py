@@ -1,18 +1,23 @@
 #Ung Thị Như Ngọc - K214060404
 
-# tinh diem tong tung khoi
+#Ham tinh diem tong tung khoi
 def tongdiem(a, b, c, dstongdiem):
     tong = a * 2 + b + c
     dstongdiem.append(tong)
     return dstongdiem
 
-# nhap diem tung mon
-dsdiem = []
+#Ham nhap diem
+def nhapdiem(dstenmon):
+    dsdiem = []
+    for i in range(len(dstenmon)):
+        print('Nhap diem mon ' + dstenmon[i])
+        s = float(input())
+        dsdiem.append(s)
+    return dsdiem
+
+# nhap diem
 dstenmon = ['Toan', 'Ly', 'Hoa', 'Sinh', 'Su', 'Dia', 'Van', 'Anh']
-for i in range(len(dstenmon)):
-    print('Nhap diem ' + dstenmon[i])
-    s = float(input())
-    dsdiem.append(s)
+dsdiem = nhapdiem(dstenmon)
 print('Danh sach diem tung mon: ', dsdiem)
 
 # tong diem tung khoi
