@@ -42,14 +42,10 @@ for i in range(N):
     # Tinh diem
     tong = tinhdiem(dsdiem, dstinchi, diemrl)
     dstong.append(tong)
-print(dstong)
-print(dstensv)
 
 # Sap xep danh sach
 tong_sapxep = sorted(dstong, reverse=True)
-print(tong_sapxep)
 ds_sinhvien = sapxepten(tong_sapxep, dstong, dstensv)
-print(ds_sinhvien)
 
 # Lay ra hoc sinh nhan hoc bong
 dsvitri = []
