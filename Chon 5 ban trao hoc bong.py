@@ -25,8 +25,8 @@ def sapxepten(tong_sapxep, dstong, dstensv):
         ten_sapxep.append(dstensv[vt])
     return ten_sapxep
 
-dstenmon = ['Toan cao cap', 'Lap trinh'] #, 'GTN', 'Tu tuong', 'Ly luan','Vi mo','QHQT','Xa hoi']
-dstinchi = [3, 3] #, 2, 2, 3, 3, 2, 2]
+dstenmon = ['Toan cao cap', 'Lap trinh', 'GTN', 'Tu tuong', 'Ly luan','Vi mo','QHQT','Xa hoi']
+dstinchi = [3, 3, 2, 2, 3, 3, 2, 2]
 dstensv = []
 dstong = []
 
@@ -50,7 +50,7 @@ ten_sapxep = sapxepten(tong_sapxep, dstong, dstensv)
 # Lay ra hoc sinh nhan hoc bong
 dsvitri = []
 ds_sinhvien = []
-for i in range(3):
+for i in range(5):
     if (tong_sapxep[i] >= diemhb):
         dsvitri.append(i)
 for i in range(len(dsvitri)):
