@@ -1,3 +1,5 @@
+#Ung Thị Như Ngọc - K214060404
+
 def nhap_diem_mon(dstenmon):
     dsdiem = []
     for i in range(len(dstenmon)):
@@ -7,45 +9,52 @@ def nhap_diem_mon(dstenmon):
     return dsdiem
 
 def tinhdiem(dsdiem, dstinchi, diemrl):
-    tongdiem = sum(dsdiem)
+    ds_diem_mon = []
+    for i in range(len(dstinchi)):
+        diem_mon_hoc = dstinchi[i] * dsdiem[i]  
+        ds_diem_mon.append(diem_mon_hoc)
+    tong_diem_mon = sum(ds_diem_mon)
     tongtinchi = sum(dstinchi)
-    a = len(dstinchi)
-    diemtb = (tongdiem * a) / tongtinchi
-    tong = diemtb + (diemrl * 0.2)
+    tong = (tong_diem_mon / tongtinchi) + (diemrl * 0.2)
     return round(tong, 1)
 
-def sapxepten(tong_sapxep, dstong, dshocsinh):
-    sinhvien = []
+def sapxepten(tong_sapxep, dstong, dstensv):
+    ds_sinhvien = []
     for diem in tong_sapxep:
         vt = dstong.index(diem)
-        sinhvien.append(dshocsinh[vt])
-    return sinhvien
+        ds_sinhvien.append(dstensv[vt])
+    return ds_sinhvien
 
-diemhb = float(input('Nhap diem xet hoc bong: '))
-N = int(input('Nhap so hoc sinh:'))
-dstenmon = ['Toán', 'Lập trình', 'Giới thiệu ngành']  # , 'Tư tưởng', 'Lý luận','Vi mô','QHQT','Xã hội']
-dstinchi = [3, 3, 2]  # , 2, 3, 3, 2, 2]
-dshocsinh = []
+dstenmon = ['Toan cao cap', 'Lap trinh', 'GTN', 'Tu tuong', 'Ly luan','Vi mo','QHQT','Xa hoi']
+dstinchi = [3, 3, 2, 2, 3, 3, 2, 2]
+dstensv = []
 dstong = []
-dsnhanhb = []
 
+#Nhap ten va diem
+diemhb = float(input('Nhap diem xet hoc bong: '))
+N = int(input('Nhap so hoc sinh: '))
 for i in range(N):
-    ten = input('Nhap ten hoc sinh:')
-    dshocsinh.append(ten)
+    ten = input('Nhap ten hoc sinh: ')
+    dstensv.append(ten)
     dsdiem = nhap_diem_mon(dstenmon)
     diemrl = int(input('Nhap drl: '))
 
     # Tinh diem
     tong = tinhdiem(dsdiem, dstinchi, diemrl)
     dstong.append(tong)
+print(dstong)
+print(dstensv)
 
 # Sap xep danh sach
 tong_sapxep = sorted(dstong, reverse=True)
-sinhvien = sapxepten(tong_sapxep, dstong, dshocsinh)
+print(tong_sapxep)
+ds_sinhvien = sapxepten(tong_sapxep, dstong, dstensv)
+print(ds_sinhvien)
 
 # Lay ra hoc sinh nhan hoc bong
-for i in range(3):
+dsvitri = []
+for i in range(5):
     if (tong_sapxep[i] >= diemhb):
-        dsnhanhb.append(i)
-for i in range(len(dsnhanhb)):
-    print('Danh sach sinh vien nhan hoc bong: ' + sinhvien[dsnhanhb[i]])
+        dsvitri.append(i)
+for i in range(len(dsvitri)):
+    print('Danh sach sinh vien nhan hoc bong: ' + ds_sinhvien[dsvitri[i]])
