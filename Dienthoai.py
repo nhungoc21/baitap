@@ -5,18 +5,21 @@ dssl = []
 dsdoanhthu = []
 listgia = []
 while True: 
-    loai = int(input('Nhap loai dien thoai:\n1. IPhone 13\n2. IPhone 13 Pro\n3. IPhone 13 Pro Max\n4. IPhone 13 Mini\n'))
-    listgia.append(dsgia[loai - 1])
-    sl = int(input('Nhap so luong: '))
-    dssl.append(sl)
-    t = input('Nhap tiep?(co/khong) ')
-    if t == 'khong':
-        break  
+    try: 
+        loai = int(input('1. IPhone 13\n2. IPhone 13 Pro\n3. IPhone 13 Pro Max\n4. IPhone 13 Mini\nNhap so tuong ung loai dien thoai: '))
+        listgia.append(dsgia[loai - 1])
+        sl = int(input('Nhap so luong: '))
+        dssl.append(sl)
+        t = input('Nhap tiep?(co/khong) ')
+        if t == 'khong':
+            break  
+    except:
+        print ('Hay nhap dung so')
 #lay gia
 print(listgia)
 print(dssl)
 for i in range(len(dssl)):
     tong = dssl[i]*listgia[i]
     dsdoanhthu.append(tong)
-    tongdoanhthu=sum(dsdoanhthu)
+tongdoanhthu=sum(dsdoanhthu)
 print('Doanh thu cuoi ngay: ',tongdoanhthu)
