@@ -11,7 +11,7 @@ dsdt = ['ip13', 'ip13pro', 'ip13promax', 'ip13mini']
 dsgia = [2000, 3000, 5000, 500]
 dssl = []
 gia_dt_daban = []
-#Nhap 
+#Nhap dien thoai va so luong
 while True: 
     try: 
         loai = int(input('1. IPhone 13\n2. IPhone 13 Pro\n3. IPhone 13 Pro Max\n4. IPhone 13 Mini\nNhap so tuong ung loai dien thoai: '))
